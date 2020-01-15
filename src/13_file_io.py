@@ -9,7 +9,7 @@ https://docs.python.org/3/tutorial/inputoutput.html#reading-and-writing-files
 # Print all the contents of the file, then close the file
 
 # YOUR CODE HERE
-with open('src/foo.txt') as f:
+with open('foo.txt') as f:
     print(f.read())
 
 # Open up a file called "bar.txt" (which doesn't exist yet) for
@@ -18,10 +18,10 @@ with open('src/foo.txt') as f:
 # sure that it contains what you expect it to contain
 
 # YOUR CODE HERE
-with open('src/bar.txt', 'w') as f:
+with open('bar.txt', 'w') as f:
     f.write('one')
     f.write('two')
     f.write('three')
 
-with open('src/bar.txt') as f:
+with open('bar.txt') as f:
     print(f.read())

@@ -22,3 +22,29 @@ and does the following:
 import sys
 import calendar
 from datetime import datetime
+
+cal = calendar.TextCalendar(calendar.SUNDAY)
+
+def help():
+  print("cmd: python src/14_cal.py month year")
+
+def main(args):
+  if len(args) == 0:
+    time = datetime.now()
+    mon = cal.formatmonth(time.year, time.month)
+    print(mon)
+  elif len(args) == 1:
+    if(args[0] == '-h' or args[0] == '--help'):
+      help()
+    else:
+      time = datetime.now()
+      mon = cal.formatmonth(time.year, int(args[0]))
+      print(mon)
+  elif len(args) == 2:
+    mon = cal.formatmonth(int(args[1]), int(args[0]))
+    print(mon)
+  else:
+    help()
+
+if __name__ == "__main__":
+  main(sys.argv[1:])

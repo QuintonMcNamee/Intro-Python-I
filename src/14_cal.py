@@ -41,7 +41,7 @@ def main(args):
       mon = cal.formatmonth(time.year, int(args[0]))
       print(mon)
   elif len(args) == 2:
-    s = cal.formatmonth(int(args[1]), int(args[0]))
+    mon = cal.formatmonth(int(args[1]), int(args[0]))
     print(mon)
   else:
     help()
